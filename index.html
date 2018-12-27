@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cody Maxie</title>
+  <meta name="description" content="Portfolio website">
+  <meta name="author" content="Cody Maxie">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body onload="textAnimation();">
+
+  <div id="container-header">
+    <p id="header"><b>Cody Maxie</b></p>
+    <div id="header-menu"> 
+      <a class="header-link" href="#">About Me</a>
+      <a class="header-link" href="#">Skills</a>
+      <a class="header-link" href="#">Projects</a>
+      <a class="header-link" href="#">Github</a>
+    </div>
+  </div>
+  
+  <div id="container-terminal">
+    <div id="terminal-window">
+      <div id="top-bar">
+        <div id="red-dot"></div>
+        <div id="yellow-dot"></div>
+        <div id="green-dot"></div>
+        <p id="top-bar-text">root@whoAmI</p>
+      </div>
+      <div id="terminal-body">
+        <p class="root-user">root@whoAmI:~$</p><p id="text-animation"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="container-skills">
+    <div class="skill">
+      <div class="skill-header">
+        <p><b>HTML/CSS</b></p>
+      </div>
+      <div class="skill-text">
+        <ul class="skill-list">
+          <li>Flex Box</li>
+          <li>Grid</li>
+          <li>Media Queries</li>
+          <li>Responsive Design</li>
+          <li>Pseudo Elements and Classes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-header">
+        <p><b>JAVASCRIPT</b></p>
+      </div>
+      <div class="skill-text">
+        <ul class="skill-list">
+          <li>DOM Manipulation</li>
+          <li>JSON</li>
+          <li>Node JS</li>
+          <li>NPM</li>
+          <li>React</li>
+          <li>Babel</li>
+        </ul>
+      </div>    
+    </div>
+    <div class="skill">
+      <div class="skill-header">
+        <p><b>PYTHON</b></p>
+      </div>
+      <div class="skill-text">
+        <ul class="skill-list">
+          <li>Openpyxl</li>
+          <li>Selenium</li>
+          <li>Beautiful Soup</li>
+          <li>Web Driver</li>
+          <li>Pyautogui</li>
+        </ul>
+      </div>    
+    </div>
+    <div class="skill">
+      <div class="skill-header">
+        <p><b>DJANGO</b></p>
+      </div>
+      <div class="skill-text">
+        <ul class="skill-list">
+          <li>Custom User Authentication</li>
+          <li>Google Integration</li>
+          <li>PostgreSQL Implementation</li>
+          <li>Server Deployment via Vultr</li>
+          <li>Continuous Site Administration</li>
+        </ul>
+      </div>    
+    </div>
+    <div class="skill">
+      <div class="skill-header">
+        <p><b>Other</b></p>
+      </div>
+      <div class="skill-text">
+        <ul class="skill-list">
+          <li>Bash Terminal</li>
+          <li>SSH</li>
+          <li>Git/Version Control</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div id="container-projects">
+    <p id="projects-header"><b>My Projects</b></p>
+    <div class="card">
+      <img class="card-img-top" src="./lunchscore.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><b>LunchScore</b></h5>
+        <p class="card-text">
+        A <b>Django</b> powered app to help track lunch habits. Features custom user authentication
+        and Google login integration. Deployed on a linux server. 
+        </p>
+        <a href="https://www.lunchscore.com" class="btn btn-primary">lunchscore.com</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./SwcFT.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><b>SWCFT</b></h5>
+        <p class="card-text">
+        A template for what a social media website could look like using the <b>React</b> framework. 
+        Uses React to render UI elements.
+        </p>
+        <a href="#" class="btn btn-primary">SCWFT</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./building_a_colony.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><b>Building A Colony</b></h5>
+        <p class="card-text">
+        An infinite click web game developed with <b>Javascript</b>. Building A Colony uses OOP 
+        to track game progress and render stats to the UI.
+        </p>
+        <a href="#" class="btn btn-primary">Building A Colony</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./tech_i_use.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><b>Tech I Use</b></h5>
+        <p class="card-text">
+        A simple project that utilizes <b>Javascript</b> to animate an image to a canvas and point 
+        to elements within the image. also features text animations.
+        </p>
+        <a href="#" class="btn btn-primary">Tech I Use</a>
+      </div>
+    </div>
+</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

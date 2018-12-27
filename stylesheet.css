@@ -1,0 +1,203 @@
+body {
+  background: #cde;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  opacity: 0;
+  margin: 3px 0px;
+  border-radius: 3px;
+  border: solid 1px #cde;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+#container-header {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px 10px;
+  color: #08d;
+  font-size: 2rem;
+}
+
+#container-header #header {
+  color: #046;
+  letter-spacing: 5px;
+}
+
+#container-header #header-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+#container-header .header-link {
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+  color: #08d;
+}
+#container-header .header-link:hover {
+  color: #fff;
+}
+
+#container-terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  width: 100%
+}
+
+#terminal-window {
+  font-family: 'Ubuntu Mono', monospace;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #abd;
+}
+
+#terminal-window #top-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30px;
+  background: #777;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#terminal-window #red-dot {border-radius: 50px; width: 20px; height: 20px; background: red; margin: 5px;}
+#terminal-window #yellow-dot {border-radius: 50px; width: 20px; height: 20px; background: yellow; margin: 5px;}
+#terminal-window #green-dot {border-radius: 50px; width: 20px; height: 20px; background: #0f0; margin: 5px;}
+#terminal-window #top-bar-text {padding-top: 2px;}
+#terminal-window #terminal-body {
+  font-size: 2rem;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  background: #555;
+  color: #ddd;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#terminal-window .root-user {
+  color: #0e0;
+  margin-right: 3px;
+}
+
+#terminal-window #text-animation {
+  height: 40px;
+  border-right: solid 16px #0e0;
+}
+
+#container-skills {
+  height: 100vh;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #046;
+  color: #fff;
+
+}
+
+#container-skills .skill {
+  margin-top: 20vh;
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+}
+#container-skills .skill-header {
+  background: #def;
+  color: #046;
+  border-radius: 10px;
+  border: solid 3px white;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+#container-skills .skill-text {
+  color: #cde;
+}
+
+#container-projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#container-projects #projects-header {
+  width: 100%;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #046;
+}
+
+#container-projects .card {
+  width: 40%;
+  max-width: 500px;
+  max-height: 670px;
+  margin: 25px;
+  background: #046;
+  border-radius: 10px;
+  color: white;
+}
+
+#container-projects .card:hover {
+  background: #157;
+}
+
+#container-projects .card-img-top {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#container-projects .card-body {
+  text-align: center;
+}
+
+#container-projects .card-title {
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+}
+
+#container-projects .card-text {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  #container-skills .skill-header {font-size: 1.5rem;}
+  #container-skills .skill-text {font-size: .8rem;}
+  #container-projects .card {margin: 5vh 2vw; width: 40%;}
+}
+
+@media screen and (max-width: 1200px) {
+  #container-skills .skill-header {font-size: 1.1rem;}
+  li {font-size: 1rem;}
+  #container-projects .card {margin: 25px; width: 40%;}
+}
+
+@media screen and (max-width: 800px) {
+  #container-skills .skill-header {font-size: .8rem;}
+  li {font-size: .8rem;}
+  #container-projects .card {width: 80%;}
+}
