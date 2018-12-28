@@ -1,5 +1,3 @@
-let cody = "Cody Maxie";
-
 const textAnimElem = document.getElementById('text-animation');
 
 let possibleText = [
