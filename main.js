@@ -2,8 +2,9 @@ const textAnimElem = document.getElementById('text-animation');
 
 let possibleText = [
   'webDeveloper','frontEndDesigner',
-  'backEndProgrammer','hobbyServerAdmin',
+  'backEndBuilder','hobbyServerAdmin',
   'linuxEnthusiast', 'pythonProgrammer',
+  'bashPowerUser', 'taskAutomator'
 ];
 let currentText = 0;
 
@@ -23,40 +24,29 @@ const textAnimation = () => {
       clearInterval(intervalTypeText);
       setTimeout(function() {
         document.getElementById('text-animation').textContent = "";
-        textAnimation()}, 4000);
+        textAnimation()}, 1000);
     } else {
       document.getElementById('text-animation').textContent = text.substring(0, document.getElementById('text-animation').textContent.length + 1);
     }
   }
 }
 
+document.getElementById('container-skills').onmouseover = function(){timeoutFadeInSkills()};
 
-document.getElementsByClassName('skill-header')[0].addEventListener("click", function() {
+const timeoutFadeInSkills = () => {
   fadeInSkills(0);
-});
-
-document.getElementsByClassName('skill-header')[1].addEventListener("click", function() {
-  fadeInSkills(1);
-});
-
-document.getElementsByClassName('skill-header')[2].addEventListener("click", function() {
-  fadeInSkills(2);
-});
-
-document.getElementsByClassName('skill-header')[3].addEventListener("click", function() {
-  fadeInSkills(3);
-});
-
-document.getElementsByClassName('skill-header')[4].addEventListener("click", function() {
-  fadeInSkills(4);
-});
+  setTimeout(function() {fadeInSkills(1);}, 700);
+  setTimeout(function() {fadeInSkills(2);}, 1400);
+  setTimeout(function() {fadeInSkills(3);}, 2100);
+  setTimeout(function() {fadeInSkills(4);}, 2800);
+  document.getElementById('container-skills').onmouseover = "";
+};
 
 const fadeInSkills = (list) => {
-  
   currentOpac = 0.0;
   let intervalIncreaseOpac = setInterval(function() {
     addOpac();
-  }, 40);
+  }, 10);
   const addOpac = () => {
     for (let skill of document.getElementsByClassName('skill-list')[list].children) {
       if (skill.style.opacity < 1) {
@@ -68,3 +58,6 @@ const fadeInSkills = (list) => {
     }
   }
 };
+
+
+  
