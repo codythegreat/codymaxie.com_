@@ -45,6 +45,7 @@ li {
   float: right;
   color: #08d;
 }
+
 #container-header .header-link:hover {
   color: #fff;
 }
@@ -77,10 +78,33 @@ li {
   border-radius: 10px 10px 0px 0px;
 }
 
-#terminal-window #red-dot {border-radius: 50px; width: 20px; height: 20px; background: red; margin: 5px;}
-#terminal-window #yellow-dot {border-radius: 50px; width: 20px; height: 20px; background: yellow; margin: 5px;}
-#terminal-window #green-dot {border-radius: 50px; width: 20px; height: 20px; background: #0f0; margin: 5px;}
-#terminal-window #top-bar-text {padding-top: 2px;}
+#terminal-window #red-dot {
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  margin: 5px;
+}
+
+#terminal-window #yellow-dot {
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  margin: 5px;
+}
+
+#terminal-window #green-dot {
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background: #0f0;
+  margin: 5px;
+}
+
+#terminal-window #top-bar-text {
+  padding-top: 2px;
+}
 
 #terminal-window #terminal-body {
   font-size: 2rem;
@@ -126,6 +150,7 @@ li {
   display: flex;
   flex-direction: column;
 }
+
 #container-skills .skill-header {
   background: #def;
   color: #046;
@@ -213,9 +238,18 @@ li {
   border-radius: 10px;
 }
 
-#container-aboutme #aboutme-img { padding: 10px; }
+#container-aboutme #aboutme-img {
+  padding: 10px;
+}
 
-#container-aboutme img {border-radius: 10px;}
+#container-aboutme img {
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 #container-aboutme #aboutme-border {
   width: 10px;
@@ -257,21 +291,61 @@ li {
 
 
 @media screen and (max-width: 1500px) {
-  #container-skills .skill-header {font-size: 1.5rem;}
-  #container-skills .skill-text {font-size: .8rem;}
-  #container-projects .card {margin: 5vh 2vw; width: 40%;}
-  #container-aboutme #aboutme-body {font-size: 1.3rem;}
+  #container-skills .skill-header {
+    font-size: 1.5rem;
+  }
+
+  #container-skills .skill-text {
+    font-size: .8rem;
+  }
+
+  #container-projects .card {
+    margin: 5vh 2vw;
+    width: 40%;
+  }
+
+  #container-aboutme #aboutme-body {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  #container-skills .skill-header {font-size: 1.1rem;}
-  li {font-size: 1rem;}
-  #container-projects .card {margin: 25px; width: 40%;}
-  #container-aboutme #aboutme-body {font-size: 1rem;}
+  #container-aboutme img {
+    width: 400px;
+  }
+
+  #container-skills .skill-header {
+    font-size: 1.1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  #container-projects .card {
+    margin: 25px;
+    width: 40%;
+  }
+
+  #container-aboutme #aboutme-body {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
-  #container-skills .skill-header {font-size: .8rem;}
-  li {font-size: .8rem;}
-  #container-projects .card {width: 80%;}
+  #container-aboutme img {
+    width: 200px;
+  }
+
+  #container-skills .skill-header {
+    font-size: .8rem;
+  }
+
+  li {
+    font-size: .8rem;
+  }
+
+  #container-projects .card {
+    width: 80%;
+  }
 }
