@@ -1,8 +1,8 @@
 const textAnimElem = document.getElementById('text-animation');
 
 let possibleText = [
-  'fullStackDeveloper', 'frontEndDesigner',
-  'backEndBuilder', 'hobbyServerAdmin',
+  'fullStackDev', 'UIDesigner',
+  'backEndBuilder', 'serverAdmin',
   'linuxEnthusiast', 'pythonProgrammer',
   'golangDeveloper',
   'bashPowerUser', 'taskAutomator'

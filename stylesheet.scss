@@ -1,0 +1,432 @@
+// Break Points
+
+$tinyMobile: 375px;
+$maxMobile: 800px;
+$maxDesktopSM: 1200px;
+
+@mixin tinyMobile {
+  @media (max-width: #{$tinyMobile}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$maxMobile}) {
+    @content;
+  }
+}
+
+@mixin desktopSM {
+  @media (min-width: #{$maxMobile}) {
+    @content;
+  }
+}
+
+@mixin desktopMD {
+  @media (min-width: #{$maxDesktopSM}) {
+    @content;
+  }
+}
+
+// Global Settings
+
+body {
+  background: #cde;
+  font-family: 'Oswald', sans-serif;
+
+  @include mobile {
+    overflow-x: hidden;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  opacity: 0;
+  margin: 3px 0px;
+  border-radius: 5px;
+  border: solid 2px #cde;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+
+  @include mobile {
+    font-size: .8em;
+  }
+
+  @include desktopSM {
+    font-size: 1em;
+  }
+}
+
+// Top Navigation Bar
+
+#container-header {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px 10px;
+  color: #08d;
+  font-size: 2rem;
+  @include mobile {
+    font-size: 1em;
+  }
+
+  #header {
+    color: #046;
+    letter-spacing: 5px;
+  }
+
+  #header-menu {
+    display: flex;
+    flex-direction: row;
+
+    .header-link {
+      padding-left: 10px;
+      padding-right: 10px;
+      float: right;
+      color: #08d;
+
+      @include mobile {
+        font-size: .8em;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 3px;
+      }
+    }
+
+    .header-link:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Terminal Animation
+
+#container-terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+
+  #terminal-window {
+    font-family: 'Ubuntu Mono', monospace;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #abd;
+
+    #top-bar {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 30px;
+      background: #777;
+      color: white;
+      border-radius: 10px 10px 0px 0px;
+
+      #red-dot {
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        background: red;
+        margin: 5px;
+      }
+
+      #yellow-dot {
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        background: yellow;
+        margin: 5px;
+      }
+
+      #green-dot {
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        background: #0f0;
+        margin: 5px;
+      }
+
+      #top-bar-text {
+        padding-top: 2px;
+      }
+    }
+
+    #terminal-body {
+      font-size: 2rem;
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+      background: #555;
+      color: #ddd;
+      border-radius: 0px 0px 10px 10px;
+      @include mobile {
+        font-size: 1em;
+      }
+
+      .root-user {
+        color: #0e0;
+        margin-right: 3px;
+      }
+
+      #text-animation {
+        height: 40px;
+        border-right: solid 16px #0e0;
+        @include mobile {
+          height: 20px;
+          border-right-width: 8px;
+        }
+      }
+    }
+  }
+}
+
+// About Me
+
+#container-aboutme {
+  width: 100%;
+  padding-bottom: 30vh;
+  background: #59c;
+
+  @include desktopMD {
+    font-size: 1.3em;
+  }
+
+  #aboutme-header {
+    margin-bottom: 20vh;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #004;
+  }
+
+  #aboutme {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    background: #def;
+    border-radius: 10px;
+    @include mobile {
+      flex-direction: column;
+    }
+
+    #aboutme-img {
+      padding: 10px;
+
+      img {
+        border-radius: 10px;
+        width: 500px;
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mobile {
+          max-width: 100%;
+          top: 0%;
+          transform: translateY(0%)
+        }
+
+        @include desktopSM {
+          width: 400px;
+        }
+      }
+    }
+
+    #aboutme-border {
+      width: 10px;
+      margin: 10px 10px;
+      background: #004;
+    }
+
+    #aboutme-info {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 10px 10px 10px;
+      color: #004;
+      font-size: 1.5rem;
+
+      #aboutme-subheader {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      #aboutme-body {
+        @include desktopSM {
+          font-size: 1em;
+        }
+        @include mobile {
+          font-size: .8em;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Skills
+
+#container-skills {
+  min-height: 100vh;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #046;
+  color: #fff;
+
+  #skills-header {
+    width: 100vw;
+    font-size: 4em;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #def;
+
+    @include mobile {
+      font-size: 4em;
+    }
+  }
+
+  .skill {
+    margin: 5vh 0;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      width: 45%;
+    }
+
+    .skill-header {
+      background: #def;
+      color: #046;
+      border-radius: 10px;
+      border: solid 3px white;
+      text-align: center;
+      letter-spacing: 5px;
+      
+      @include mobile {
+        font-size: 1em;
+      }
+
+      @include desktopSM {
+        font-size: 1.2em;
+      }
+
+      @include desktopMD {
+        font-size: 1.5em;
+      }
+    }
+
+    .skill-text {
+      color: #def;
+
+      @include desktopMD {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+// Projects
+
+#container-projects {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  #projects-header {
+    width: 100%;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #046;
+  }
+
+  .card {
+    width: 40vw;
+    margin: 25px;
+    background: #046;
+    border-radius: 10px;
+    color: white;
+
+    @include mobile {
+      min-width: 80vw;
+      
+    }
+
+    @include desktopSM {
+      margin: 25px;
+      width: 40%;
+    }
+
+    @include desktopMD {
+      margin: 5vh 2vw;
+      width: 40%;
+    }
+
+    .card-img-top {
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    .card-body {
+      text-align: center;
+
+      .card-title {
+        font-size: 1.7rem;
+        letter-spacing: 3px;
+      }
+
+      .card-text {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .card:hover {
+    background: #157;
+  }
+}
+
+// Footer
+
+#footer {
+  height: 50px;
+  width: 100%;
+  background: #cde;
+  color: #046;
+  font-size: 1.5rem;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#footer a {
+  color: #046;
+}
+
+#footer a:hover {
+  color: #379;
+}
