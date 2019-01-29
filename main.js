@@ -4,6 +4,7 @@ let possibleText = [
   'fullStackDeveloper', 'frontEndDesigner',
   'backEndBuilder', 'hobbyServerAdmin',
   'linuxEnthusiast', 'pythonProgrammer',
+  'golangAPICreator',
   'bashPowerUser', 'taskAutomator'
 ];
 let currentText = 0;
