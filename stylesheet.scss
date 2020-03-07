@@ -195,20 +195,31 @@ li {
 
 #container-aboutme {
   width: 100%;
-  padding-bottom: 30vh;
+  min-height: 100vh;
   background: #59c;
+
+  @include mobile {
+    padding-bottom: 5vh;
+  }
 
   @include desktopMD {
     font-size: 1.3em;
   }
 
+  @include desktopSM {
+    padding-bottom: 10vh;
+  }
+
   #aboutme-header {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     width: 100%;
     text-align: center;
     font-size: 4rem;
     letter-spacing: 5px;
     color: #004;
+    @include mobile {
+      margin-bottom: 5vh;
+    }
   }
 
   #aboutme {
