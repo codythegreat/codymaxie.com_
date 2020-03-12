@@ -412,6 +412,13 @@ li {
       .card-text {
         font-size: 1.2rem;
         letter-spacing: 2px;
+        // used to keep text height static despite variations in text len
+        @include desktopMD {
+          height: 20vh;
+        }
+        @include desktopSM {
+          height: 25vh;
+        }
       }
     }
   }
