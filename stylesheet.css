@@ -507,6 +507,18 @@ li {
   letter-spacing: 2px;
 }
 
+@media (min-width: 800px) {
+  #container-projects .card .card-body .card-text {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  #container-projects .card .card-body .card-text {
+    height: 20vh;
+  }
+}
+
 #container-projects .card:hover {
   background: #157;
 }
