@@ -1,3 +1,28 @@
+// Colors
+$dark-blue: #046;
+$light-blue: #59c;
+$white-blue: #cde;
+
+$header-link-blue: #08d;
+
+$term-shadow: #abd;
+$term-top-bar: #777;
+$term-body: #555;
+$term-body-text: #ddd;
+$term-red: #d00;
+$term-yellow: #dd0;
+$term-green: #0d0;
+
+$aboutme-body-bg: #def;
+$aboutme-body-text: #004;
+
+$skill-border: #fff;
+$skill-header-bg: #def;
+$skill-item-text: #def;
+
+$footer-hover: #379;
+
+
 // Break Points
 
 $tinyMobile: 375px;
@@ -137,7 +162,7 @@ li {
         border-radius: 50px;
         width: 20px;
         height: 20px;
-        background: red;
+        background: $term-red;
         margin: 5px;
       }
 
@@ -145,7 +170,7 @@ li {
         border-radius: 50px;
         width: 20px;
         height: 20px;
-        background: yellow;
+        background: $term-yellow;
         margin: 5px;
       }
 
@@ -153,7 +178,7 @@ li {
         border-radius: 50px;
         width: 20px;
         height: 20px;
-        background: #0f0;
+        background: $term-green;
         margin: 5px;
       }
 
@@ -175,13 +200,13 @@ li {
       }
 
       .root-user {
-        color: #0e0;
+        color: $term-green;
         margin-right: 3px;
       }
 
       #text-animation {
         height: 40px;
-        border-right: solid 16px #0e0;
+        border-right: solid 16px $term-green;
         @include mobile {
           height: 20px;
           border-right-width: 8px;
