@@ -423,36 +423,7 @@ li {
   }
 }
 
-#container-projects {
-  min-height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media (max-width: 800px) {
-  #container-projects {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-#container-projects #projects-header {
+#projects-header {
   width: 100%;
   font-size: 4rem;
   letter-spacing: 5px;
@@ -460,37 +431,44 @@ li {
   color: #046;
 }
 
+#container-projects {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 800px) {
+  #container-projects {
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
 #container-projects .card {
-  width: 40vw;
   margin: 25px;
   background: #046;
   border-radius: 10px;
   color: white;
 }
 
-@media (max-width: 800px) {
-  #container-projects .card {
-    min-width: 80vw;
-  }
-}
-
 @media (min-width: 800px) {
   #container-projects .card {
     margin: 25px;
-    width: 40%;
   }
 }
 
 @media (min-width: 1200px) {
   #container-projects .card {
     margin: 5vh 2vw;
-    width: 40%;
   }
 }
 
 #container-projects .card .card-img-top {
-  padding: 5px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 #container-projects .card .card-body {
@@ -505,18 +483,6 @@ li {
 #container-projects .card .card-body .card-text {
   font-size: 1.2rem;
   letter-spacing: 2px;
-}
-
-@media (min-width: 800px) {
-  #container-projects .card .card-body .card-text {
-    height: 25vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  #container-projects .card .card-body .card-text {
-    height: 20vh;
-  }
 }
 
 #container-projects .card:hover {

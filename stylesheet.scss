@@ -353,52 +353,44 @@ li {
 
 // Projects
 
+#projects-header {
+  width: 100%;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #046;
+}
+
 #container-projects {
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  // responsive grid 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  @include mobile {
-    flex-direction: column;
+  // for desktops, min res of card is 400
+  @include desktopSM {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
-  #projects-header {
-    width: 100%;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    text-align: center;
-    color: #046;
-  }
 
   .card {
-    width: 40vw;
     margin: 25px;
     background: #046;
     border-radius: 10px;
     color: white;
 
-    @include mobile {
-      min-width: 80vw;
-      
-    }
-
     @include desktopSM {
       margin: 25px;
-      width: 40%;
     }
 
     @include desktopMD {
       margin: 5vh 2vw;
-      width: 40%;
     }
 
     .card-img-top {
-      padding: 5px;
-      border-radius: 10px;
+      padding: 10px;
+      border-radius: 20px;
     }
 
     .card-body {
@@ -412,14 +404,6 @@ li {
       .card-text {
         font-size: 1.2rem;
         letter-spacing: 2px;
-
-        @include desktopSM {
-          height: 25vh;
-        }
-
-        @include desktopMD {
-          height: 20vh;
-        }
       }
     }
   }
