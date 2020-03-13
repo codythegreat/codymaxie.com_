@@ -448,6 +448,9 @@ li {
 }
 
 #container-projects .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 25px;
   background: #046;
   border-radius: 10px;
@@ -473,6 +476,16 @@ li {
 
 #container-projects .card .card-body {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #container-projects .card .card-body .card-title {
@@ -483,6 +496,17 @@ li {
 #container-projects .card .card-body .card-text {
   font-size: 1.2rem;
   letter-spacing: 2px;
+}
+
+#container-projects .card .card-body .btn {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #container-projects .card:hover {

@@ -375,6 +375,7 @@ li {
 
 
   .card {
+    display: flex;
     margin: 25px;
     background: #046;
     border-radius: 10px;
@@ -395,6 +396,10 @@ li {
 
     .card-body {
       text-align: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
 
       .card-title {
         font-size: 1.7rem;
@@ -404,6 +409,13 @@ li {
       .card-text {
         font-size: 1.2rem;
         letter-spacing: 2px;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1.4rem;
+        font-weight: bold;
+        align-self: flex-end;
+        justify-content: center;
       }
     }
   }
