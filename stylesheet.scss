@@ -96,13 +96,21 @@ li {
   padding: 3px 10px;
   color: $header-link-blue;
   font-size: 2rem;
+
+  @include tinyMobile {
+    font-size: .8rem;
+  }
   @include mobile {
-    font-size: 1em;
+    font-size: 1rem;
+
   }
 
   #header {
     color: $dark-blue;
     letter-spacing: 5px;
+    @include mobile {
+      letter-spacing: 3px;
+    }
   }
 
   #header-menu {
@@ -116,10 +124,9 @@ li {
       color: $header-link-blue;
 
       @include mobile {
-        font-size: .8em;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 3px;
+        padding-left: .2rem;
+        padding-right: .2rem;
+        padding-top: .1rem;
       }
     }
 

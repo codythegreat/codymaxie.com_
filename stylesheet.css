@@ -54,15 +54,27 @@ li {
   font-size: 2rem;
 }
 
+@media (max-width: 375px) {
+  #container-header {
+    font-size: .8rem;
+  }
+}
+
 @media (max-width: 800px) {
   #container-header {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
 #container-header #header {
   color: #046;
   letter-spacing: 5px;
+}
+
+@media (max-width: 800px) {
+  #container-header #header {
+    letter-spacing: 3px;
+  }
 }
 
 #container-header #header-menu {
@@ -84,10 +96,9 @@ li {
 
 @media (max-width: 800px) {
   #container-header #header-menu .header-link {
-    font-size: .8em;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    padding-top: .1rem;
   }
 }
 
