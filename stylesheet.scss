@@ -78,11 +78,11 @@ li {
   letter-spacing: 2px;
 
   @include mobile {
-    font-size: .8em;
+    font-size: .8rem;
   }
 
   @include desktopSM {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -201,7 +201,7 @@ li {
       color: $term-body-text;
       border-radius: 0px 0px 10px 10px;
       @include mobile {
-        font-size: 1em;
+        font-size: 1rem;
       }
 
       .root-user {
@@ -233,7 +233,7 @@ li {
   }
 
   @include desktopMD {
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
 
   @include desktopSM {
@@ -306,10 +306,10 @@ li {
 
       #aboutme-body {
         @include desktopSM {
-          font-size: 1em;
+          font-size: 1.5rem;
         }
         @include mobile {
-          font-size: .8em;
+          font-size: 1rem;
           text-align: center;
         }
       }
@@ -331,13 +331,13 @@ li {
 
   #skills-header {
     width: 100vw;
-    font-size: 4em;
+    font-size: 4rem;
     letter-spacing: 5px;
     text-align: center;
     color: $bright-white-blue;
 
     @include mobile {
-      font-size: 4em;
+      font-size: 4rem;
     }
   }
 
@@ -359,15 +359,15 @@ li {
       letter-spacing: 5px;
       
       @include mobile {
-        font-size: 1em;
+        font-size: 1rem;
       }
 
       @include desktopSM {
-        font-size: 1.2em;
+        font-size: 1.2rem;
       }
 
       @include desktopMD {
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
 
@@ -375,7 +375,7 @@ li {
       color: $bright-white-blue;
 
       @include desktopMD {
-        font-size: 1.2em;
+        font-size: 1.2rem;
       }
     }
   }

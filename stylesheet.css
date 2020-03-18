@@ -27,13 +27,13 @@ li {
 
 @media (max-width: 800px) {
   li {
-    font-size: .8em;
+    font-size: .8rem;
   }
 }
 
 @media (min-width: 800px) {
   li {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -197,7 +197,7 @@ li {
 
 @media (max-width: 800px) {
   #container-terminal #terminal-window #terminal-body {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -232,7 +232,7 @@ li {
 
 @media (min-width: 1200px) {
   #container-aboutme {
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
 }
 
@@ -335,13 +335,13 @@ li {
 
 @media (min-width: 800px) {
   #container-aboutme #aboutme #aboutme-info #aboutme-body {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 800px) {
   #container-aboutme #aboutme #aboutme-info #aboutme-body {
-    font-size: .8em;
+    font-size: 1rem;
     text-align: center;
   }
 }
@@ -367,7 +367,7 @@ li {
 
 #container-skills #skills-header {
   width: 100vw;
-  font-size: 4em;
+  font-size: 4rem;
   letter-spacing: 5px;
   text-align: center;
   color: #def;
@@ -375,7 +375,7 @@ li {
 
 @media (max-width: 800px) {
   #container-skills #skills-header {
-    font-size: 4em;
+    font-size: 4rem;
   }
 }
 
@@ -408,19 +408,19 @@ li {
 
 @media (max-width: 800px) {
   #container-skills .skill .skill-header {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 800px) {
   #container-skills .skill .skill-header {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1200px) {
   #container-skills .skill .skill-header {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
@@ -430,7 +430,7 @@ li {
 
 @media (min-width: 1200px) {
   #container-skills .skill .skill-text {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
