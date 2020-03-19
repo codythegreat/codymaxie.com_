@@ -41,19 +41,22 @@ const timeoutFadeInSkills = () => {
   fadeInSkills(0);
   setTimeout(function () {
     fadeInSkills(1);
-  }, 500);
+  }, 400);
   setTimeout(function () {
     fadeInSkills(2);
-  }, 1000);
+  }, 800);
   setTimeout(function () {
     fadeInSkills(3);
-  }, 1500);
+  }, 1200);
   setTimeout(function () {
     fadeInSkills(4);
-  }, 2000);
+  }, 1600);
   setTimeout(function () {
     fadeInSkills(5);
-  }, 2500);
+  }, 2000);
+  setTimeout(function () {
+    fadeInSkills(6);
+  }, 2400);
   document.getElementById('container-skills').onmouseover = "";
 };
 
