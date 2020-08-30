@@ -33,7 +33,7 @@ const textAnimation = () => {
   }
 }
 
-document.getElementById('container-skills').onmouseover = function () {
+document.getElementById('container-skills').onmouseenter = function () {
   timeoutFadeInSkills()
 };
 
@@ -57,6 +57,9 @@ const timeoutFadeInSkills = () => {
   setTimeout(function () {
     fadeInSkills(6);
   }, 2400);
+  setTimeout(function () {
+    fadeInSkills(7);
+  }, 2800);
   document.getElementById('container-skills').onmouseover = "";
 };
 
