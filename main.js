@@ -1,23 +1,23 @@
 const textAnimElem = document.getElementById('text-animation');
 
-let possibleText = [
-  'fullStackDev', 'UIDesigner',
-  'backEndBuilder', 'serverAdmin',
-  'linuxEnthusiast', 'pythonProgrammer',
-  'golangDeveloper',
-  'bashPowerUser', 'taskAutomator'
+let terminalText = [
+  'BI_Developer', 'UI_Designer',
+  'SQL_Developer', 'Server_Admin',
+  'Linux_Enthusiast', 'Python_Developer',
+  'Go_Developer', 'Bash_Scripter',
+  'JS_Developer'
 ];
 let currentText = 0;
 
 const textAnimation = () => {
 
   let intervalTypeText = setInterval(function () {
-    typeText(possibleText[currentText])
+    typeText(terminalText[currentText])
   }, 200);
 
   const typeText = (text) => {
     if (document.getElementById('text-animation').textContent == text) {
-      if (currentText == possibleText.length - 1) {
+      if (currentText == terminalText.length - 1) {
         currentText = 0;
       } else {
         currentText++;
