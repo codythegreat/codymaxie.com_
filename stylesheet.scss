@@ -271,18 +271,24 @@ li {
         width: 500px;
         height: auto;
         position: relative;
+        display: flex;
         // 48 px used instead of 50 for image alignment
         top: 48%;
         transform: translateY(-50%);
 
         @include mobile {
+          padding:10px, 50%;
           max-width: 100%;
           top: 0%;
+          display: block;
+          margin: auto;
           transform: translateY(0%)
         }
 
         @include desktopSM {
           width: 400px;
+          top: 48%;
+          transform: translateY(-50%);
         }
       }
     }
