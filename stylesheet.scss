@@ -272,8 +272,7 @@ li {
         height: auto;
         position: relative;
         display: flex;
-        // 48 px used instead of 50 for image alignment
-        top: 48%;
+        top: 50%;
         transform: translateY(-50%);
 
         @include mobile {
@@ -287,7 +286,7 @@ li {
 
         @include desktopSM {
           width: 400px;
-          top: 48%;
+          top: 50%;
           transform: translateY(-50%);
         }
       }
