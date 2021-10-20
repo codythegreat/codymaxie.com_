@@ -1,11 +1,15 @@
 const textAnimElem = document.getElementById('text-animation');
 
 let terminalText = [
-  'BI_Developer', 'UI_Designer',
-  'SQL_Developer', 'Server_Admin',
-  'Linux_Enthusiast', 'Python_Developer',
-  'Go_Developer', 'Bash_Scripter',
-  'JS_Developer'
+    'BI_Developer'
+  , 'UI_Designer'
+  , 'SQL_Developer'
+  , 'Server_Admin'
+  , 'Linux_Enthusiast'
+  , 'Python_Developer'
+  , 'Go_Developer'
+  , 'Bash_Scripter'
+  , 'JS_Developer'
 ];
 let currentText = 0;
 

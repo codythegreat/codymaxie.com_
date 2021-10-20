@@ -38,7 +38,6 @@ li {
 }
 
 #container-header {
-  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,19 +50,6 @@ li {
           justify-content: space-between;
   padding: 3px 10px;
   color: #08d;
-  font-size: 2rem;
-}
-
-@media (max-width: 375px) {
-  #container-header {
-    font-size: .8rem;
-  }
-}
-
-@media (max-width: 800px) {
-  #container-header {
-    font-size: 1rem;
-  }
 }
 
 #container-header #header {
@@ -74,6 +60,13 @@ li {
 @media (max-width: 800px) {
   #container-header #header {
     letter-spacing: 3px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #container-header #header {
+    font-size: 3rem;
   }
 }
 
@@ -91,6 +84,9 @@ li {
   padding-left: 10px;
   padding-right: 10px;
   float: right;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: #08d;
 }
 
@@ -99,6 +95,12 @@ li {
     padding-left: .2rem;
     padding-right: .2rem;
     padding-top: .1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #container-header #header-menu .header-link {
+    font-size: 2rem;
   }
 }
 
@@ -246,7 +248,7 @@ li {
   margin-bottom: 10vh;
   width: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 5px;
   color: #004;
 }
@@ -254,29 +256,34 @@ li {
 @media (max-width: 800px) {
   #container-aboutme #aboutme-header {
     margin-bottom: 5vh;
+    font-size: 4rem;
   }
 }
 
 #container-aboutme #aboutme {
-  width: 80%;
-  margin: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  width: 90%;
+  margin: 0 5%;
+  padding: 2%;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #def;
   border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 1200px) {
   #container-aboutme #aboutme {
-    -webkit-box-orient: vertical;
+    width: 80%;
+    margin: 0 10%;
+    padding: unset;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -289,9 +296,6 @@ li {
   width: 500px;
   height: auto;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -311,7 +315,21 @@ li {
 
 @media (min-width: 800px) {
   #container-aboutme #aboutme #aboutme-img img {
-    width: 400px;
+    padding: 10px, 50%;
+    max-width: 100%;
+    top: 0%;
+    display: block;
+    margin: auto;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #container-aboutme #aboutme #aboutme-img img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -332,26 +350,45 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 10px 10px 10px;
   color: #004;
-  font-size: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  #container-aboutme #aboutme #aboutme-info {
+    margin: 0px 0px 10px 10px;
+  }
 }
 
 #container-aboutme #aboutme #aboutme-info #aboutme-subheader {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
-@media (min-width: 800px) {
-  #container-aboutme #aboutme #aboutme-info #aboutme-body {
-    font-size: 1.5rem;
+@media (min-width: 1200px) {
+  #container-aboutme #aboutme #aboutme-info #aboutme-subheader {
+    background-color: #046;
+    border-radius: 0 10px 0 10px;
+    color: #def;
   }
 }
 
 @media (max-width: 800px) {
   #container-aboutme #aboutme #aboutme-info #aboutme-body {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  #container-aboutme #aboutme #aboutme-info #aboutme-body {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #container-aboutme #aboutme #aboutme-info #aboutme-body {
+    font-size: 2.5rem;
   }
 }
 
@@ -376,7 +413,7 @@ li {
 
 #container-skills #skills-header {
   width: 100vw;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 5px;
   text-align: center;
   color: #def;
@@ -445,10 +482,16 @@ li {
 
 #projects-header {
   width: 100%;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 5px;
   text-align: center;
   color: #046;
+}
+
+@media (max-width: 800px) {
+  #projects-header {
+    font-size: 4rem;
+  }
 }
 
 #container-projects {

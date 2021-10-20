@@ -89,38 +89,34 @@ li {
 // Top Navigation Bar
 
 #container-header {
-  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 3px 10px;
   color: $header-link-blue;
-  font-size: 2rem;
-
-  @include tinyMobile {
-    font-size: .8rem;
-  }
-  @include mobile {
-    font-size: 1rem;
-
-  }
 
   #header {
     color: $dark-blue;
     letter-spacing: 5px;
     @include mobile {
       letter-spacing: 3px;
+      font-size: 1rem;
+    }
+    @include desktopSM {
+      font-size: 3rem;
     }
   }
 
   #header-menu {
     display: flex;
     flex-direction: row;
+    
 
     .header-link {
       padding-left: 10px;
       padding-right: 10px;
       float: right;
+      align-self: center;
       color: $header-link-blue;
 
       @include mobile {
@@ -128,6 +124,9 @@ li {
         padding-right: .2rem;
         padding-top: .1rem;
       }
+    @include desktopSM {
+      font-size: 2rem;
+    }
     }
 
     .header-link:hover {
@@ -244,23 +243,28 @@ li {
     margin-bottom: 10vh;
     width: 100%;
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 5px;
     color: $aboutme-text;
     @include mobile {
       margin-bottom: 5vh;
+      font-size: 4rem;
     }
   }
 
   #aboutme {
-    width: 80%;
-    margin: 0 10%;
     display: flex;
-    flex-direction: row;
+    width: 90%;
+    margin: 0 5%;
+    padding: 2%;
+    flex-direction: column;
     background: $bright-white-blue;
     border-radius: 10px;
-    @include mobile {
-      flex-direction: column;
+    @include desktopMD {
+      width: 80%;
+      margin: 0 10%;
+      padding: unset;
+      flex-direction: row;
     }
 
     #aboutme-img {
@@ -271,11 +275,10 @@ li {
         width: 500px;
         height: auto;
         position: relative;
-        display: flex;
         top: 50%;
         transform: translateY(-50%);
 
-        @include mobile {
+        @include mobile  {
           padding:10px, 50%;
           max-width: 100%;
           top: 0%;
@@ -285,7 +288,16 @@ li {
         }
 
         @include desktopSM {
-          width: 400px;
+          padding:10px, 50%;
+          max-width: 100%;
+          top: 0%;
+          display: block;
+          margin: auto;
+          transform: translateY(0%)
+        }
+
+        @include desktopMD {
+          display: flex;
           top: 50%;
           transform: translateY(-50%);
         }
@@ -301,22 +313,33 @@ li {
     #aboutme-info {
       display: flex;
       flex-direction: column;
-      margin: 10px 10px 10px 10px;
       color: $aboutme-text;
-      font-size: 1.5rem;
+      // always be at 100% width
+      width: 100%;
+      @include desktopMD {
+        margin: 0px 0px 10px 10px;
+      }
 
       #aboutme-subheader {
-        font-size: 2rem;
+        font-size: 3rem;
         text-align: center;
+        @include desktopMD {
+          background-color: $dark-blue;
+          border-radius: 0 10px 0 10px;
+          color: $bright-white-blue;
+        }
       }
 
       #aboutme-body {
-        @include desktopSM {
-          font-size: 1.5rem;
-        }
         @include mobile {
-          font-size: 1rem;
+          font-size: 1.5rem;
           text-align: center;
+        }
+        @include desktopSM {
+          font-size: 2rem;
+        }
+        @include desktopMD {
+          font-size: 2.5rem;
         }
       }
     }
@@ -337,7 +360,7 @@ li {
 
   #skills-header {
     width: 100vw;
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 5px;
     text-align: center;
     color: $bright-white-blue;
@@ -391,10 +414,14 @@ li {
 
 #projects-header {
   width: 100%;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 5px;
   text-align: center;
   color: $dark-blue;
+
+  @include mobile {
+    font-size: 4rem;
+  }
 }
 
 #container-projects {

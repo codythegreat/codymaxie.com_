@@ -53,17 +53,15 @@
       <div id="aboutme-border"></div>
       <div id="aboutme-info">
         <div id="aboutme-subheader">
-          <p><b>I'm Cody, web dev and comp sci enthusiast</b></p>
+          <p><b>I'm Cody, Business Intelligence Developer with a passion for computer science</b></p>
         </div>
         <div id="aboutme-body">
           <p>
-            I am a Business Intelligence Developer with a passion for software development and programming. I've worked with many languages,
-            including Go, Python, C, C#, Java, SQL, JS, React and Django. I enjoy frontend and backend web development.<br>
-            I currently work at the Choctaw Nation of Oklahoma. I utilize my programming knowledge to create specialized reports by
-            querying databases and cleaning data. I also have an active <a href="https://github.com/codythegreat">GitHub account</a>
-            where you can see my many software and web dev projects. </br>
-            When I'm not working or coding, I spend my time playing diskgolf, playing guitar, running, rowing, and fishing.
-            My favorite TV show is The Office.
+            I build interactive and feature-rich reports and dashboards
+            using HTML/CSS/JS templates. Sometimes I'll use libraries such as
+            datatables and chartJS as well.<br>
+            I use SQL and OBIEE to develop efficient data models. These data models power our reports.<br>
+
           </p>
         </div>
       </div>
@@ -202,61 +200,16 @@
   <div id="container-projects">
     
     <div class="card">
-      <img class="card-img-top" src="./lunchscore.PNG" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><b>LunchScore</b></h5>
-        <p class="card-text">
-          A <b>Django</b> powered app to help track lunch habits. Features custom user authentication
-          and Google login integration. Deployed on a linux server.
-        </p>
-        <div class="button-container">
-          <a href="https://www.lunchscore.com" class="btn btn-primary">Lunch Score</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
       <img class="card-img-top" src="./go-artist-api.png" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><b>Go Artist API</b></h5>
         <p class="card-text">
           I used <b>Go</b> to scrape data on musicians and their music genres.
           I converted over 53K data points to JSON format.
-          I've hosted this on the <b>Go</b> API linked below.
+          Source for the API linked below.
         </p>
         <div class="button-container">
-          <a href="http://45.76.248.143/" class="btn btn-primary">Go Artist API</a>
-          <a href="https://github.com/codythegreat/go-rest-api" class="btn btn-info">Source Code</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="https://raw.githubusercontent.com/codythegreat/codymaxie.com_rework/master/BookList.PNG" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><b>BookList</b></h5>
-        <p class="card-text">
-          BookList is a <b>C# ASP.NET Core</b> web app that utilizes an <b>Azure SQL Database</b>
-          to perform CRUD operations. CRUD Operations are disabled on the live site, but you can still see
-          the implementation in the source code.
-        </p>
-        <div class="button-container">
-          <a href="https://booklistrazor20200315021519.azurewebsites.net/Booklist/Index" class="btn btn-primary">BookList</a>
-          <a href="https://github.com/codythegreat/BookListRazorPages" class="btn btn-info">Source Code</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="./CuL.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><b>Calc-U-Later</b></h5>
-        <p class="card-text">
-          CuL is a <b>C# ASP.NET Core</b> web app. I used Visual Studio to build out 
-          the application, then deployed it using <b>Azure</b>.
-        </p>
-        <div class="button-container">
-          <a href="https://razor-pages1.azurewebsites.net/" class="btn btn-primary">Calc-U-Later</a>
+          <a href="https://github.com/codythegreat/go-rest-api" class="btn btn-primary">Go Artist API</a>
         </div>
       </div>
     </div>
@@ -296,8 +249,8 @@
       <div class="card-body">
         <h5 class="card-title"><b>Dead Simple Slides</b></h5>
         <p class="card-text">
-          Far and away my most popular repository with <b>40 stars and 5 contributors</b>.
-          DSS is a Vim-style presentation tool written in <b>C</b>.
+          Far and away my most popular repository with <b>50 stars and 5 contributors</b>.
+          DSS is a command line presentation tool written in <b>C</b>.
         </p>
         <div class="button-container">
           <a href="https://github.com/codythegreat/dss" class="btn btn-primary">Dead Simple Slides</a>
@@ -314,7 +267,6 @@
           Utilizes <b>jQuery and Datatables</b> to render beautifully formatted data to html.
         </p>
         <div class="button-container">
-          <a href="https://codythegreat.github.io/Ablavo/static/index.html" class="btn btn-primary">Ablavo</a>
           <a href="https://github.com/codythegreat/Ablavo" class="btn btn-info">Source Code</a>
         </div>     
       </div>
@@ -352,11 +304,13 @@
     
   </div>
 
-
-
   <div id="footer">
-    <p id="footer-text">2020 Created By Cody Maxie | <b><a id="footer-link" href="mailto:maxiecody@gmail.com">Contact
-          Me</a></b></p>
+    <p id="footer-text">
+      <span title="Yes, this refreshes every year">
+        <script>document.write(new Date().getFullYear())</script>
+      </span> Created By Cody Maxie | <b>
+      <a id="footer-link" href="mailto:maxiecody@gmail.com">Contact Me</a></b>
+    </p>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
