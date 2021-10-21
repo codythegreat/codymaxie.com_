@@ -9,8 +9,8 @@ $white: #fff;
 $header-link-blue: #08d;
 
 $term-shadow: #abd;
-$term-top-bar: #777;
-$term-body: #555;
+$term-top-bar: #555;
+$term-body: #333;
 $term-body-text: #ddd;
 $term-red: #d00;
 $term-yellow: #dd0;
@@ -161,6 +161,7 @@ li {
       background: $term-top-bar;
       color: $white;
       border-radius: 10px 10px 0px 0px;
+      align-content: center;
 
       #red-dot {
         border-radius: 50px;
@@ -305,9 +306,9 @@ li {
     }
 
     #aboutme-border {
-      width: 10px;
+      width: 5px;
       margin: 10px 0px;
-      background: $aboutme-text;
+      background: $dark-blue;
     }
 
     #aboutme-info {
@@ -383,20 +384,23 @@ li {
       background: $bright-white-blue;
       color: $dark-blue;
       border-radius: 10px;
-      border: solid 3px $white;
+      border: dotted 3px $white;
       text-align: center;
+      vertical-align: center;
       letter-spacing: 5px;
-      
-      @include mobile {
-        font-size: 1rem;
-      }
+      p {margin: .5rem 0;}
 
-      @include desktopSM {
+
+      @include mobile {
         font-size: 1.2rem;
       }
 
+      @include desktopSM {
+        font-size: 1.4rem;
+      }
+
       @include desktopMD {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
     }
 
