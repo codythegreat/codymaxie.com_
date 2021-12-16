@@ -9,12 +9,12 @@ $white: #fff;
 $header-link-blue: #08d;
 
 $term-shadow: #abd;
-$term-top-bar: #555;
-$term-body: #333;
+$term-top-bar: #38383c;
+$term-body: #1e1e1e;
 $term-body-text: #ddd;
-$term-red: #d00;
-$term-yellow: #dd0;
-$term-green: #0d0;
+$term-red: #ff605c;
+$term-yellow: #ffbd44;
+$term-green: #00ca4e;
 
 $aboutme-text: #004;
 
@@ -163,28 +163,22 @@ li {
       border-radius: 10px 10px 0px 0px;
       align-content: center;
 
-      #red-dot {
+      .dot {
         border-radius: 50px;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
+        margin: 7px;
+      }
+      #red-dot {
         background: $term-red;
-        margin: 5px;
       }
 
       #yellow-dot {
-        border-radius: 50px;
-        width: 20px;
-        height: 20px;
         background: $term-yellow;
-        margin: 5px;
       }
 
       #green-dot {
-        border-radius: 50px;
-        width: 20px;
-        height: 20px;
         background: $term-green;
-        margin: 5px;
       }
 
       #top-bar-text {
