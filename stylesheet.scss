@@ -94,7 +94,7 @@ li {
 }
 
 #container-nav {
-  z-index: 1000;
+  z-index: 999;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -114,9 +114,10 @@ li {
     color: $dark-blue;
     letter-spacing: 5px;
     margin: auto 0 auto 0;
+    padding-bottom: 2px;
     @include mobile {
       letter-spacing: 3px;
-      font-size: 1rem;
+      font-size: 2rem;
     }
     @include desktopSM {
       font-size: 3rem;
@@ -125,23 +126,47 @@ li {
 
   #nav-menu {
     display: flex;
-    flex-direction: row;
+    @include mobile {
+      position: fixed;
+      visibility: hidden;
+      transition: 1s ease 0s;
+      top: 3.4rem;
+      &.toggled {
+        transition: 1s ease 0s;
+        visibility: visible;
+        right: 0;
+      }
+      flex-direction: column;
+      right: -200px;
+      background-color: $white-blue;
+      border-radius: 0 0 0 5px;
+    }
 
     .nav-link {
+      &:hover {color: $white;}
       float: right;
       color: $header-link-blue;
 
       @include mobile {
         margin: auto;
+        width: 100%;
+        font-size: 1.5rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid white;
+        }
       }
       @include desktopSM {
+        flex-direction: row;
         margin: auto;
         font-size: 2rem;
       }
     }
-
-    .header-link:hover {
-      color: $white;
+  }
+  span {
+    margin: auto 0;
+    font-size: 2rem;
+    @include desktopSM {
+      display: none;
     }
   }
 }

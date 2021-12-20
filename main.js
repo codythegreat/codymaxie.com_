@@ -94,3 +94,11 @@ window.addEventListener('scroll',(e)=>{
         nav.classList.remove("is-scrolling");
     }
 });
+
+var toggleMobileNavContent = () => {
+  document.querySelector("#nav-menu").classList.toggle("toggled");
+};
+var resetMobileNavContent = (el) => {
+  if (el !== document.querySelector('#nav-menu-toggle') && el !== document.querySelector('#nav-menu')) 
+    document.querySelector("#nav-menu").classList.remove("toggled");
+};

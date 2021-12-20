@@ -45,7 +45,7 @@ li {
 }
 
 #container-nav {
-  z-index: 1000;
+  z-index: 999;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,12 +70,13 @@ li {
   color: #046;
   letter-spacing: 5px;
   margin: auto 0 auto 0;
+  padding-bottom: 2px;
 }
 
 @media (max-width: 800px) {
   #container-nav #nav-brand {
     letter-spacing: 3px;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -89,10 +90,29 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  #container-nav #nav-menu {
+    position: fixed;
+    visibility: hidden;
+    -webkit-transition: 1s ease 0s;
+    transition: 1s ease 0s;
+    top: 3.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: -200px;
+    background-color: #cde;
+    border-radius: 0 0 0 5px;
+  }
+  #container-nav #nav-menu.toggled {
+    -webkit-transition: 1s ease 0s;
+    transition: 1s ease 0s;
+    visibility: visible;
+    right: 0;
+  }
 }
 
 #container-nav #nav-menu .nav-link {
@@ -100,21 +120,41 @@ li {
   color: #08d;
 }
 
+#container-nav #nav-menu .nav-link:hover {
+  color: #fff;
+}
+
 @media (max-width: 800px) {
   #container-nav #nav-menu .nav-link {
     margin: auto;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  #container-nav #nav-menu .nav-link:not(:last-child) {
+    border-bottom: 1px solid white;
   }
 }
 
 @media (min-width: 800px) {
   #container-nav #nav-menu .nav-link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: auto;
     font-size: 2rem;
   }
 }
 
-#container-nav #nav-menu .header-link:hover {
-  color: #fff;
+#container-nav span {
+  margin: auto 0;
+  font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+  #container-nav span {
+    display: none;
+  }
 }
 
 #container-terminal {
