@@ -83,3 +83,14 @@ const fadeInSkills = (list) => {
     }
   }
 };
+
+// Event listener adds/removes shadow 
+// on user is scrolled away from top of page
+window.addEventListener('scroll',(e)=>{
+    const nav = document.querySelector('#container-nav');
+    if(window.pageYOffset>0){
+        nav.classList.add("is-scrolling");
+    }else{
+        nav.classList.remove("is-scrolling");
+    }
+});
