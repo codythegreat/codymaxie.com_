@@ -147,6 +147,7 @@ li {
 }
 
 #container-nav span {
+  cursor: pointer;
   margin: auto 0;
   font-size: 2rem;
 }
@@ -209,19 +210,26 @@ li {
   border-radius: 50px;
   width: 16px;
   height: 16px;
-  margin: 7px;
+}
+
+#container-terminal #terminal-window #top-bar .dot:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
 }
 
 #container-terminal #terminal-window #top-bar #red-dot {
   background: #ff605c;
+  margin: 7px 3px 7px 7px;
 }
 
 #container-terminal #terminal-window #top-bar #yellow-dot {
   background: #ffbd44;
+  margin: 7px 3px;
 }
 
 #container-terminal #terminal-window #top-bar #green-dot {
   background: #00ca4e;
+  margin: 7px 7px 7px 3px;
 }
 
 #container-terminal #terminal-window #top-bar #top-bar-text {

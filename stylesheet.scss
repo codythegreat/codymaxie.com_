@@ -163,6 +163,7 @@ li {
     }
   }
   span {
+    cursor: pointer;
     margin: auto 0;
     font-size: 2rem;
     @include desktopSM {
@@ -203,18 +204,23 @@ li {
         border-radius: 50px;
         width: 16px;
         height: 16px;
-        margin: 7px;
+        &:hover {
+          filter: brightness(125%);
+        }
       }
       #red-dot {
         background: $term-red;
+        margin: 7px 3px 7px 7px;
       }
 
       #yellow-dot {
         background: $term-yellow;
+        margin: 7px 3px;
       }
 
       #green-dot {
         background: $term-green;
+        margin: 7px 7px 7px 3px;
       }
 
       #top-bar-text {
